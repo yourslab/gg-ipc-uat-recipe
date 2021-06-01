@@ -1,0 +1,27 @@
+2021-06-01T07:57:24.821Z [INFO] (main) com.aws.greengrass.util.platforms.Platform: Getting platform instance com.aws.greengrass.util.platforms.unix.UnixPlatform.. {}
+2021-06-01T07:57:24.882Z [INFO] (main) com.aws.greengrass.lifecyclemanager.Kernel: No ongoing deployment detected. Proceed as default. {}
+2021-06-01T07:57:25.005Z [INFO] (main) com.aws.greengrass.lifecyclemanager.Kernel: effective-config-dump-complete. {file=/greengrass/v2/config/effectiveConfig.yaml}
+2021-06-01T07:57:25.061Z [INFO] (main) com.aws.greengrass.deployment.DeviceConfiguration: Successfully setup Nucleus launch parameters. {}
+2021-06-01T07:57:25.256Z [INFO] (main) com.aws.greengrass.deployment.DeviceConfiguration: Nucleus lifecycle has been initialized successfully. {}
+2021-06-01T07:57:25.306Z [INFO] (main) com.aws.greengrass.deployment.DeviceConfiguration: Copy Nucleus artifacts to component store. {destination=/greengrass/v2/packages/artifacts-unarchived/aws.greengrass.Nucleus/2.1.0/aws.greengrass.nucleus, source=/opt/greengrassv2}
+2021-06-01T07:57:25.409Z [ERROR] (main) com.aws.greengrass.util.platforms.Platform: id-lookup. Error while looking up id. {stdout=, stderr=id: ggc_user: no such user
+, user=ggc_user}
+2021-06-01T07:57:44.029Z [INFO] (main) com.aws.greengrass.lifecyclemanager.Kernel: effective-config-dump-complete. {file=/greengrass/v2/config/effectiveConfig.yaml}
+2021-06-01T07:57:44.032Z [INFO] (main) com.aws.greengrass.lifecyclemanager.KernelLifecycle: Waiting for services to shutdown. {}
+2021-06-01T07:57:44.046Z [ERROR] (Copier) com.aws.greengrass.util.orchestration.SystemdUtils: systemd-setup. {stderr=Failed to get D-Bus connection: Operation not permitted, command=systemctl daemon-reload}
+2021-06-01T07:57:44.049Z [ERROR] (main) com.aws.greengrass.util.orchestration.SystemdUtils: systemd-setup. Failed to set up systemd service. {}
+java.io.IOException: Command systemctl daemon-reload failed
+	at com.aws.greengrass.util.orchestration.SystemdUtils.runCommand(SystemdUtils.java:87)
+	at com.aws.greengrass.util.orchestration.SystemdUtils.setupSystemService(SystemdUtils.java:46)
+	at com.aws.greengrass.easysetup.GreengrassSetup.performSetup(GreengrassSetup.java:299)
+	at com.aws.greengrass.easysetup.GreengrassSetup.main(GreengrassSetup.java:242)
+
+2021-06-01T07:57:44.051Z [INFO] (main) com.aws.greengrass.lifecyclemanager.KernelLifecycle: system-shutdown. {main=null}
+2021-06-01T07:57:44.059Z [INFO] (main) com.aws.greengrass.lifecyclemanager.Kernel: effective-config-dump-complete. {file=/greengrass/v2/config/effectiveConfig.yaml}
+2021-06-01T07:57:44.060Z [INFO] (main) com.aws.greengrass.lifecyclemanager.KernelLifecycle: Waiting for services to shutdown. {}
+2021-06-01T07:57:44.062Z [INFO] (Serialized listener processor) com.aws.greengrass.lifecyclemanager.KernelLifecycle: executor-service-shutdown-initiated. {}
+2021-06-01T07:57:44.063Z [INFO] (main) com.aws.greengrass.lifecyclemanager.KernelLifecycle: Waiting for executors to shutdown. {}
+2021-06-01T07:57:44.065Z [INFO] (main) com.aws.greengrass.lifecyclemanager.KernelLifecycle: executor-service-shutdown-complete. {}
+2021-06-01T07:57:44.066Z [INFO] (main) com.aws.greengrass.lifecyclemanager.KernelLifecycle: context-shutdown-initiated. {}
+2021-06-01T07:57:44.068Z [INFO] (main) com.aws.greengrass.lifecyclemanager.KernelLifecycle: context-shutdown-complete. {}
+2021-06-01T07:57:44.068Z [INFO] (Serialized listener processor) com.aws.greengrass.dependency.Context: Interrupted while running tasks. Publish thread will exit now.. {}
